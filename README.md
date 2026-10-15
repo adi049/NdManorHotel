@@ -1,11 +1,13 @@
-# Hotel ND Manor
+# Hotel ND Manor Website
 
-Updated source for the Hotel ND Manor website. The full project ZIP is available from the project maintainer; this repository is being prepared for deployment.
+The Next.js application source is in [`ndmanor_work/`](./ndmanor_work/).
 
-## Current status
+## Deploy on Vercel
+1. Import this GitHub repository into Vercel.
+2. Set **Root Directory** to `ndmanor_work` in Project Settings.
+3. Use the default Next.js build (`npm run build`).
+4. Configure `DATABASE_URL` and `NEXT_PUBLIC_SITE_URL`. To send inquiry email, configure `RESEND_API_KEY`, `RESEND_FROM`, and `INQUIRY_TO`.
+5. Run the database schema setup using the instructions in `ndmanor_work/README.md`.
+6. Verify domain/DNS, submit a test inquiry, and confirm delivery before sharing the live URL.
 
-- App: Next.js 16, React 19, PostgreSQL + Drizzle
-- Deployment requires a Node.js-capable host and environment configuration.
-- Required environment variables are documented in `.env.example`.
-
-See `ndmanor_work/README.md` for setup and launch details.
+This site uses PostgreSQL and a server-side inquiry API; GitHub Pages is not a compatible host without removing/reworking the API. Read [`ndmanor_work/SETUP-NOTES.md`](./ndmanor_work/SETUP-NOTES.md) and [`ndmanor_work/AUDIT-REPORT.md`](./ndmanor_work/AUDIT-REPORT.md) for launch blockers. No live deployment is claimed until a host build succeeds and the domain is verified.
