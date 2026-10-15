@@ -13,7 +13,7 @@ export const waLink = (msg: string) => `https://wa.me/${HOTEL.whatsapp}?text=${e
 export const NAV = [{label:"Home",href:"/"},{label:"About",href:"/about"},{label:"Rooms & Stay",href:"/rooms"},{label:"Gallery",href:"/gallery"},{label:"Amenities",href:"/amenities"},{label:"Location",href:"/location"},{label:"Contact",href:"/location#contact"}];
 export const GALLERY = [
  {src:"https://gos3.ibcdn.com/59c49223-78f1-4101-b09a-6ceb90f5201d.jpeg",alt:"Hotel ND Manor exterior at dusk",cat:"Exterior",title:"The Manor at Dusk"},
- {src:"https://assets.hotel.check24.de/size%3D0x450/nfc%3D404/source%3DaHR0cHM6Ly9pLnRyeXpleGhlbGFwaS5jb20vbG9kaGluZy85NjAwMDAwMC85NTc3MDAwMC85NTc2OTA wMzg5OS80NTM1MTA5NF96LmpwZw%3D%3D%2171177/picture.jpg",alt:"Hotel ND Manor exterior",cat:"Exterior",title:"Daytime Facade"},
+ {src:"https://gos3.ibcdn.com/59c49223-78f1-4101-b09a-6ceb90f5201d.jpeg",alt:"Hotel ND Manor exterior and entrance",cat:"Exterior",title:"The Hotel Exterior"},
  {src:"https://media.easemytrip.com/media/Hotel/SHL-2307141614485741/Common/CommonOlbNCK.jpg",alt:"Hotel interior seating",cat:"Interiors",title:"The Lobby"},
  {src:"https://img.easemytrip.com/EMTHOTEL-7364119/32/rm/lg/95768999_6.jpg",alt:"Guest room interior",cat:"Rooms",title:"Guest Room"},
 ];
