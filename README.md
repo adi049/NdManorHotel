@@ -1,13 +1,23 @@
 # Hotel ND Manor Website
 
-The Next.js application source is in [`ndmanor_work/`](./ndmanor_work/).
+A Next.js 16 + React 19 website for Hotel ND Manor, Dehradun. The deployable application is at the repository root (`src/app`, `src/components`, `src/db`). The `ndmanor_work/` directory retains the original working copy and extra notes.
 
-## Deploy on Vercel
-1. Import this GitHub repository into Vercel.
-2. Set **Root Directory** to `ndmanor_work` in Project Settings.
-3. Use the default Next.js build (`npm run build`).
-4. Configure `DATABASE_URL` and `NEXT_PUBLIC_SITE_URL`. To send inquiry email, configure `RESEND_API_KEY`, `RESEND_FROM`, and `INQUIRY_TO`.
-5. Run the database schema setup using the instructions in `ndmanor_work/README.md`.
-6. Verify domain/DNS, submit a test inquiry, and confirm delivery before sharing the live URL.
+## Deploy
 
-This site uses PostgreSQL and a server-side inquiry API; GitHub Pages is not a compatible host without removing/reworking the API. Read [`ndmanor_work/SETUP-NOTES.md`](./ndmanor_work/SETUP-NOTES.md) and [`ndmanor_work/AUDIT-REPORT.md`](./ndmanor_work/AUDIT-REPORT.md) for launch blockers. No live deployment is claimed until a host build succeeds and the domain is verified.
+1. Import this repository into Vercel. It should detect Next.js at the root.
+2. Set environment variables: `DATABASE_URL` and `NEXT_PUBLIC_SITE_URL`.
+3. Apply the Drizzle schema from the repository root with `npx drizzle-kit push` using the configured database.
+4. Optional email notifications need `RESEND_API_KEY`, `RESEND_FROM`, and `INQUIRY_TO`.
+5. Test the contact/booking inquiry and verify domain/DNS and email delivery before advertising the site.
+
+The form is a booking **inquiry**, not a reservation confirmation. Without `DATABASE_URL` it will not save inquiries. Reference photos are remotely hosted; confirm commercial permissions or replace them with hotel-approved images before public marketing.
+
+## Local development
+
+```bash
+cp .env.example .env
+npm install
+npm run dev
+```
+
+Build checks are configured in GitHub Actions under `.github/workflows/ci.yml`. Review `AUDIT-REPORT.md` and `SETUP-NOTES.md` before production.
