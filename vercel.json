@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd ndmanor_work && npm run build",
-  "installCommand": "cd ndmanor_work && npm install",
-  "framework": "nextjs"
-}
