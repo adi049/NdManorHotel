@@ -6,9 +6,6 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ndmanor_work
     env:
       DATABASE_URL: postgresql://test:test@127.0.0.1:5432/test
       NEXT_PUBLIC_SITE_URL: https://www.ndmanor.com
